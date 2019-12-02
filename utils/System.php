@@ -17,7 +17,7 @@ class System
 
     public function setExperience(string $text): void
     {
-        if(strlen($text) > 0 && $text !== null)
+        if(strlen($text) > 500 && $text !== null)
         {
             $this->questions['experience_id'] = $text; 
         } else {
@@ -27,7 +27,7 @@ class System
 
     public function setComparison(string $text): void
     {
-        if(strlen($text) > 0 && $text !== null)
+        if(strlen($text) > 500 && $text !== null)
         {
             $this->questions['comparison_id'] = $text;
         } else {
@@ -37,7 +37,7 @@ class System
 
     public function setProblemSolution(string $text): void
     {
-        if(strlen($text) > 0 && $text !== null)
+        if(strlen($text) > 500 && $text !== null)
         {
             $this->questions['problem_id'] = $text;
         } else {
