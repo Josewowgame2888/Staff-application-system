@@ -5,10 +5,12 @@ class DiscordApp
     public $message;
     public $title;
 
-    public function sendPacket(): bool
+    public function sendPacket(): void
     {
         if($this->isValidMessage() && $this->isValidTitle() && $this->isValidHook())
         {
+            $this->message .= "\n [ \@everyone ]";
+            
             $handle = [
                 'username' => $this->title,
                 'content' => $this->message
@@ -20,16 +22,7 @@ class DiscordApp
             curl_setopt($discord, CURLOPT_POSTFIELDS, json_encode($handle));
             curl_setopt($discord, CURLOPT_RETURNTRANSFER, 1);
             curl_exec($discord);
-
-            if(curl_getinfo($discord) === 204)
-            {
-                return true;
-            } else {
-                return false;
-            }
-            
         }
-        return false;
     }
 
     private function isValidHook(): bool
