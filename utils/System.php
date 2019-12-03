@@ -92,13 +92,14 @@ class System
         $id = 'ID: '.$this->getRandomID();
         $gameTag = 'In Game Tag: '.$this->gameTag.$br;
         $discordTag = 'Discord User: '.$this->discordTag.$br;
+        $clock = date('m/d/Y g:ia');
 
         $question1 = ['Answer: '.$this->questions['experience_id'].$br.$br,'1- Tell us in detail your experience in the selected field.'.$br];
         $question2 = ['Answer: '.$this->questions['comparison_id'].$br.$br,'2- Show why we should choose you before others. Do not limit yourself.'.$br];
         $question3 = ['Answer: '.$this->questions['problem_id'].$br.$br,'3- There is a conflict between you and other staff, how would you solve this?'.$br];
         $question4 = ['Answer: '.$this->questions['extra_id'].$br.$br,'4- Anything else to say? If you can, leave descriptions of your old works or links that demonstrate your good work.'.$br];
 
-        $footer = 'If the application is good and you are interested in it, send the ID of the apply to the #discussion channel.'.$br.'-[===========================================]-';
+        $footer = 'If the application is good and you are interested in it, send the ID of the apply to the #discussion channel.'.$br.'-[==========['.$clock.']==========]-';
 
         $packet->message = 'Basic information:'.$br.$name.$mail.$age.$gameTag.$discordTag.$br.$question1[1].$question1[0].$question2[1].$question2[0].$question3[1].$question3[0].$question4[1].$question4[0].$br.$id.$br.$br.$footer.$br;
         $packet->sendPacket();
