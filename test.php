@@ -6,6 +6,8 @@ $system->position = 'Trainee';
 $system->name = 'Juan fake character';
 $system->email = 'fakemail@gmail.com';
 $system->age = '23';
+$system->discordTag = '!Josewowgame#6256';
+$system->gameTag = 'Josewowgame2888';
 
 $system->setExperience('his is a fake 500 word simulation application to check the operation of boolean code detection in system.php');
 $system->setComparison('Because I am the best moderating servers .... (Apply false)');

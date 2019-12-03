@@ -7,6 +7,8 @@ class System
     public $name;
     public $email;
     public $age;
+    public $discordTag;
+    public $gameTag;
 
     private $questions = [
         'experience_id' => null,
@@ -88,6 +90,8 @@ class System
         $mail = 'Mail: '.$this->email.$br;
         $age = 'Age: '.$this->age.$br;
         $id = 'ID: '.$this->getRandomID();
+        $gameTag = 'In Game Tag: '.$this->gameTag.$br;
+        $discordTag = 'Discord User: '.$this->discordTag.$br;
 
         $question1 = ['Answer: '.$this->questions['experience_id'].$br.$br,'1- Tell us in detail your experience in the selected field.'.$br];
         $question2 = ['Answer: '.$this->questions['comparison_id'].$br.$br,'2- Show why we should choose you before others. Do not limit yourself.'.$br];
@@ -96,7 +100,7 @@ class System
 
         $footer = 'If the application is good and you are interested in it, send the ID of the apply to the #discussion channel.'.$br.'-[===========================================]-';
 
-        $packet->message = 'Basic information:'.$br.$name.$mail.$age.$br.$question1[1].$question1[0].$question2[1].$question2[0].$question3[1].$question3[0].$question4[1].$question4[0].$br.$id.$br.$br.$footer.$br;
+        $packet->message = 'Basic information:'.$br.$name.$mail.$age.$gameTag.$discordTag.$br.$question1[1].$question1[0].$question2[1].$question2[0].$question3[1].$question3[0].$question4[1].$question4[0].$br.$id.$br.$br.$footer.$br;
         $packet->sendPacket();
     }
 
