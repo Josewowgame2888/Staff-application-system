@@ -92,7 +92,7 @@ class System
         $id = 'ID: '.$this->getRandomID();
         $gameTag = 'In Game Tag: '.$this->gameTag.$br;
         $discordTag = 'Discord User: '.$this->discordTag.$br;
-        $clock = date('m/d/Y g:ia');
+        $clock = date('d/m/Y g:ia');
 
         $question1 = ['Answer: '.$this->questions['experience_id'].$br.$br,'1- Tell us in detail your experience in the selected field.'.$br];
         $question2 = ['Answer: '.$this->questions['comparison_id'].$br.$br,'2- Show why we should choose you before others. Do not limit yourself.'.$br];
