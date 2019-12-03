@@ -1,9 +1,14 @@
 <?php
-include __DIR__.'/utils/DiscordApp.php';
-$pk = new DiscordApp();
-$pk->hook = "https://discordapp.com/api/webhooks/651194542674018334/6j3kQq0SG6JM1-9be3k1mcvTbbvDVlLC8V_szD7ZsPKlrOjs00C9ZRucX-rWqqTtIfO-";
-$pk->title = 'Developer Apply';
-$name = 'Josewowgame2888';
-$content = 'This is contents soon';
-$pk->message = $name."\n".$content;
-$pk->sendPacket();
+include __DIR__.'/utils/System.php';
+
+$system = new System();
+$system->position = 'Trainee';
+$system->name = 'Juan fake character';
+$system->email = 'fakemail@gmail.com';
+$system->age = '23';
+
+$system->setExperience('his is a fake 500 word simulation application to check the operation of boolean code detection in system.php');
+$system->setComparison('Because I am the best moderating servers .... (Apply false)');
+$system->setProblemSolution('BLABLABLABLABLABLABLABLA');
+$system->setExtras('I dont have extra links');
+$system->send();
