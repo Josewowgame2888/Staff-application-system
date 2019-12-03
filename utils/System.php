@@ -131,4 +131,13 @@ class System
         $packet->sendPacket();
     }
 
+    public static function isValid(array $data): bool
+    {
+        if(strlen($data[0]) !== 0 && strlen($data[1]) !== 0 && strlen($data[2]) !== 0 && strlen($data[3]) !== 0 && strlen($data[4]) !== 0 && strlen($data[5]) !== 0)
+        {
+            return true;
+        }
+        return false;
+    }
+
 }
