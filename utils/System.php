@@ -63,7 +63,7 @@ class System
         }
     }
 
-    public function getRandomID(): string
+    private function getRandomID(): string
     {
         $id = '';
         $abc = ['a','b','c','d','e','f','g','h','i','j','k','l','m','s','t','p','q','r','s','t','o','w','x','y','z','n'];
@@ -86,7 +86,7 @@ class System
         return $id;
     }
 
-    public function getBaseName(string $id): string
+    private function getBaseName(string $id): string
     {
         switch($id)
         {
@@ -118,7 +118,7 @@ class System
         $id = 'ID: '.$this->id;
         $gameTag = 'In Game Tag: '.$this->gameTag.$br;
         $discordTag = 'Discord User: '.$this->discordTag.$br;
-        $clock = date('d/m/Y g:ia');
+        $clock = date('d/m/Y');
 
         $question1 = ['Answer: '.$this->questions['experience_id'].$br.$br,'1- Tell us in detail your experience in the selected field.'.$br];
         $question2 = ['Answer: '.$this->questions['comparison_id'].$br.$br,'2- Show why we should choose you before others. Do not limit yourself.'.$br];
