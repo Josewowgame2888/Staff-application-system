@@ -9,6 +9,12 @@ class System
     public $age;
     public $discordTag;
     public $gameTag;
+    public $id;
+
+    public function __construct()
+    {
+        $this->id = $this->getRandomID();
+    }
 
     private $questions = [
         'experience_id' => null,
@@ -80,16 +86,36 @@ class System
         return $id;
     }
 
+    public function getBaseName(string $id): string
+    {
+        switch($id)
+        {
+            case 'developer':
+                return 'Developer';
+            break;
+            case 'builder':
+                return 'Builder';
+            break;
+            case 'trinee':
+                return 'Trainee';
+            break;
+            case 'discordmod':
+                return 'Discord Moderator';
+            break;
+        }
+        return '';
+    }
+
     public function send(): void
     {
         $packet = new DiscordApp();
         $packet->hook = "https://discordapp.com/api/webhooks/651194542674018334/6j3kQq0SG6JM1-9be3k1mcvTbbvDVlLC8V_szD7ZsPKlrOjs00C9ZRucX-rWqqTtIfO-";
-        $packet->title = $this->position.' Apply';
+        $packet->title = $this->getBaseName($this->position).' Apply';
         $br = "\n";
         $name = 'Name: '.$this->name.$br;
         $mail = 'Mail: '.$this->email.$br;
         $age = 'Age: '.$this->age.$br;
-        $id = 'ID: '.$this->getRandomID();
+        $id = 'ID: '.$this->id;
         $gameTag = 'In Game Tag: '.$this->gameTag.$br;
         $discordTag = 'Discord User: '.$this->discordTag.$br;
         $clock = date('d/m/Y g:ia');
