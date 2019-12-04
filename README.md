@@ -4,4 +4,3 @@
 - Discord WebHook
 - PHP >= 7.2
 - Apache
-- HTTPS
