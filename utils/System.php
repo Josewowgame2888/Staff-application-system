@@ -109,7 +109,7 @@ class System
     public function send(): void
     {
         $packet = new DiscordApp();
-        $packet->hook = "https://discordapp.com/api/webhooks/651194542674018334/6j3kQq0SG6JM1-9be3k1mcvTbbvDVlLC8V_szD7ZsPKlrOjs00C9ZRucX-rWqqTtIfO-";
+        $packet->hook = "{insert hook}";
         $packet->title = $this->getBaseName($this->position).' Apply';
         $br = "\n";
         $name = 'Name: '.$this->name.$br;
