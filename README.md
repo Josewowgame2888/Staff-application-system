@@ -1,6 +1,9 @@
 # Staff-application-system
 With this system you can better manage your server having a better order when recruiting new staff 
 
+# Main
+- Main file is ` localhost/apply/form.html`
+
 # Utils
 - Discord Server and Discord WebHook
 - PHP >= 7.0
