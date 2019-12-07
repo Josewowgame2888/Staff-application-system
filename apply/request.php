@@ -26,7 +26,7 @@ if(System::isValid([$_POST['position'],$_POST['name'],$_POST['mail'],$_POST['age
 
     echo'<script type="text/javascript">
     alert("Thank you for submitting your application. If you are accepted a staff member will contact you these days.");
-    window.location.href="https://mobile.twitter.com/hysteria_mcpe";
+    window.location.href="https://mobile.twitter.com/Josewowgame";
     </script>';
 
 } else {
