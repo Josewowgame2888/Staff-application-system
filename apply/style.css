@@ -12,7 +12,7 @@ body {
     width: 95%;
     max-width: 500px;
     margin: auto;
-    background-color: white;
+    background-color: rgba(240, 240, 240, 0.712);
     border-radius: 7px;
 }
 
